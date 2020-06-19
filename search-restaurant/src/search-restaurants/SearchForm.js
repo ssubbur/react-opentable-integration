@@ -36,12 +36,11 @@ const Search = () => {
                         className="form-control md-sm-3"
                         onChange={e => handleChange(e.target.value)}
                     />
-
+                    {(errorMessage) ? <p className="text-danger">{errorMessage}</p> : null}
                 </div>
 
                 <div className="form-group col-md-6">
                     <button className="btn btn-primary">Search</button>
-                    {(errorMessage) ? <p className="text-danger">{errorMessage}</p> : null}
                 </div>
             </form>
         </div>
