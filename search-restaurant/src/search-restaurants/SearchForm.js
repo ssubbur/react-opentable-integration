@@ -14,10 +14,11 @@ const Search = () => {
         if (selctedCity) {
             dispatch(searchRestaurants(selctedCity));
         } else {
-            setError('Please enter city')
+            setError('Please enter city');
         }
     };
     const handleChange = (searchKey) => {
+        setError('');
         dispatch(searchCity(searchKey));
     }
 
