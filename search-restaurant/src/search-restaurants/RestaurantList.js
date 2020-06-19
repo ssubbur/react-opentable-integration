@@ -40,7 +40,14 @@ export default () => {
 
                 </div> : null
             }
-
+            {
+                (count === 0 || filteredRestaurants.length === 0) ?
+                   <p 
+                        className="text-danger">
+                           NO RECORDS TO DISPLAY
+                    </p> 
+                : null
+            }
             <div className="d-flex flex-row flex-wrap justify-content-between">
                 {renderRestuarants}
             </div>
