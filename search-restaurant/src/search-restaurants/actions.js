@@ -34,7 +34,7 @@ export const receiveCities = (cities) => ({
 })
 export const fetchCities = () => async dispatch => {
     try {
-        const results = await axios.get(`http://opentable.herokuapp.com/api/cities`);
+        const results = await axios.get(`https://opentable.herokuapp.com/api/cities`);
         return dispatch(receiveCities(results));
     }
     catch (error) {
@@ -45,7 +45,7 @@ export const fetchRestaurants = params => async dispatch => {
     try {
         dispatch(requestRestaurants(params));
         const searchParams = { ...params, per_page: 100 };
-        return await axios.get(`http://opentable.herokuapp.com/api/restaurants`, { params: searchParams })
+        return await axios.get(`https://opentable.herokuapp.com/api/restaurants`, { params: searchParams })
             .then(response => dispatch(receiveRestaurants(response.data)))
             .catch(err => {
                 dispatch(requestFailed(err))
