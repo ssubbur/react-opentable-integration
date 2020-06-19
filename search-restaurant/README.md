@@ -109,5 +109,4 @@ Partial match support while passing multiple parameters. Currently API is return
   “gender”:”Male”,
  “occupation”: “Software Engineer”
  }`
-		
 
